@@ -5,4 +5,11 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-collections:
+collections: 
+- label: "Comedy Albums"
+  name: "albums"
+  folder: "markdown/albums"
+  create: true
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Featured Image", name: "thumbnail", widget: "image"

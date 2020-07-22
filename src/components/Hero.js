@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../static/img/SDM_white.png'
-// import '../styles/hero.sass'
+import '../styles/hero.sass'
 
 
 
