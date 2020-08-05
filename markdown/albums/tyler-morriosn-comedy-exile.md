@@ -1,4 +1,4 @@
 ---
-title: Tyler Morriosn - Savage
-thumbnail: /img/07_tm_savage.jpg
+title: Dave Burke - Sexual Cactus
+thumbnail: /img/09_daveburke.jpg
 ---
