@@ -26,6 +26,13 @@ module.exports = {
         name: 'albums',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/markdown/trusted`,
+        name: 'trusted',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -2,13 +2,12 @@ import React from "react"
 import Hero from "../components/Hero"
 import Albums from "../components/Albums"
 
-const BlogIndex = ({ }) => {
+const BlogIndex = () => {
 
   return (
     <>
     <Hero />
     <Albums />
-
     </>
   )
 }

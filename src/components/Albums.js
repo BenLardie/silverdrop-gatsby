@@ -37,7 +37,8 @@ export default function Albums() {
     slidesToScroll: 1,
     autoplay: true,
     arrows: false,
-
+    swipe: true,
+    swipeToSlide: true,
   }
 
   return (

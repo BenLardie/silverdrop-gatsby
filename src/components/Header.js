@@ -16,7 +16,7 @@ export default function Header() {
       render={data => (
         <>
         <header>
-          <h1>{data.site.siteMetadata.title}</h1>
+          <title>{data.site.siteMetadata.title}</title>
         </header>
         <Hero />
         </>
