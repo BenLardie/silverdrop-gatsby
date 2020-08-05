@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import AlbumCover from './AlbumCover'
 
 export default function Albums() {
     const data = useStaticQuery(graphql`
@@ -9,17 +10,34 @@ export default function Albums() {
             node {
               frontmatter {
                 title
-                thumbnail
+                thumbnail {
+                  childImageSharp {
+                    fluid(maxWidth: 700) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
   `)
-  console.log(data.allMarkdownRemark.edges)
+  const albumData = data.allMarkdownRemark.edges
+
     return (
-        <div>
-        </div>
+        <section className='comedyAlbums'>
+          {albumData.map(album => console.log(album))}
+            {albumData.map((album, i=0) => {
+                const image = album.node.frontmatter.thumbnail.childImageSharp.fluid
+                const title = album.node.frontmatter.title
+                i++
+                console.log(image)
+                return(
+                    <AlbumCover image={ image } title={ title }key={i} />
+                )
+            })}
+        </section>
     )
 }
 
