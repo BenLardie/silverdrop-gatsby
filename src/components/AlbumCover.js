@@ -5,7 +5,7 @@ import '../styles/albums.sass'
 export default function AlbumCover({image, title}) {
     return (
         <div>
-            <Img fluid={image} className='comedyCover' />
+            <Img fluid={image} alt={title} className='comedyCover' />
         </div>
     )
 }

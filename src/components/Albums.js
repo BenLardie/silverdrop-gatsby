@@ -14,8 +14,12 @@ export default function Albums() {
                   childImageSharp {
                     fluid(maxWidth: 700) {
                       src
-                    }
-                  }
+                      aspectRatio 
+                      src 
+                      srcSet 
+                      sizes 
+              }
+            }
                 }
               }
             }
