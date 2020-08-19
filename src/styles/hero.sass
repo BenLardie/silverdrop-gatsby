@@ -1,3 +1,4 @@
+@import ./variables
 html
     height: 100%;
     width: 100;
@@ -21,9 +22,25 @@ body
     position: absolute;
     z-index: 3;
 
+.overlay 
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(205,205,205,0.6740897042410714) 100%); 
+    z-index: 2;
+
+
 .videoTag 
     position: absolute;
+    height: 100vh;
+    width: 100vw;
 
+.heroText 
+    font-family: $main-font;
+    color: white;
+    position: absolute;
+    z-index: 4;
 
 @keyframes logoAnimation
   0%

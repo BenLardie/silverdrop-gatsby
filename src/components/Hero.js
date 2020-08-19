@@ -12,6 +12,8 @@ export default function Hero() {
             <video className='videoTag' autoPlay loop muted>
                 <source src={sample} type='video/mp4' />
             </video>
+            <div className='overlay'></div>
+            <h1 className='heroText'>Video Photography Design</h1>
         </section>
     )
 }
