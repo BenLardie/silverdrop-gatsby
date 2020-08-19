@@ -13,7 +13,7 @@ export default function Hero() {
                 <source src={sample} type='video/mp4' />
             </video>
             <div className='overlay'></div>
-            <h1 className='heroText'>Video Photography Design</h1>
+            <h1 className='heroText'>Video and Photography Services <br/>for Small Communities with Big Ideas.</h1>
         </section>
     )
 }
