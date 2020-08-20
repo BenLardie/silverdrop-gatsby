@@ -45,19 +45,17 @@ module.exports = {
             options: {},
           },
         ],
-      },
+      }},
       {
         resolve: `gatsby-plugin-nprogress`,
         options: {
           // Setting a color is optional.
-          color: `tomato`,
+          color: `dodger blue`,
           // Disable the loading spinner.
           showSpinner: true,
         },
       },
-    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
-  ]
-}
+]}
