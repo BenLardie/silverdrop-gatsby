@@ -6,10 +6,12 @@ export default function Nav() {
     if (typeof window !== "undefined") {
         // eslint-disable-next-line global-require
         require("smooth-scroll")('a[href*="#"]')
-      }
+    }
 
-    const links = [{to:'/#about',
-                    displayAddress: 'About'}, {to:'/#portfolio', displayAddress: 'Portfolio'}, {to:'/#contact', displayAddress: 'Contact'},]
+    const links = [{
+        to: '/#about',
+        displayAddress: 'About'
+    }, { to: '/#portfolio', displayAddress: 'Portfolio' }, { to: '/#contact', displayAddress: 'Contact' },]
     return (
         <nav>
             {links.map(link => <Link to={link.to} className='navLink'>{link.displayAddress}</Link>)}
