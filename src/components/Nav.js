@@ -3,34 +3,24 @@ import { Link } from "gatsby"
 import '../styles/nav.sass'
 
 export default function Nav() {
-    const handleLinkClick = (e, target) => {
-        if (typeof window !== 'undefined') {
-
-            if (window.location.pathname === '/') {
-                if (e) e.preventDefault()
-                scrollToElement(target, {
-                    offset: -95, // Offset a fixed header if you please
-                    duration: 1000,
-                })
-            }
-        }
-    }
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line global-require
+        require("smooth-scroll")('a[href*="#"]')
+      }
     return (
         <nav>
             <Link
-                onClick={e => handleLinkClick(e, '#about')}
                 to={'/#about'}
+                className='navLink'
             >
                 About
             </Link>
             <Link
-                onClick={e => handleLinkClick(e, '#experience')}
                 to={'/#portfolio'}
             >
                 Portfolio
             </Link>
             <Link
-                onClick={e => handleLinkClick(e, '#work')}
                 to={'/#contact'}
             >
                 Contact

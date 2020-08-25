@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Albums from "../components/Albums"
 import TrustedClients from "../components/TrustedClients"
 import { Helmet } from "react-helmet";
+import About from "../components/About"
 
 const BlogIndex = () => {
 
@@ -15,6 +16,7 @@ const BlogIndex = () => {
     </Helmet>
     <Nav />
     <Hero />
+    <About />
     <Albums />
     <TrustedClients />
     </>
