@@ -14,7 +14,12 @@ export default function Nav() {
     }, { to: '/#portfolio', displayAddress: 'Portfolio' }, { to: '/#contact', displayAddress: 'Contact' },]
     return (
         <nav>
-            {links.map(link => <Link to={link.to} className='navLink'>{link.displayAddress}</Link>)}
+            {links.map((link, i=0) => {
+                i++
+                return (
+                    <Link to={link.to} className='navLink' key={i}>{link.displayAddress}</Link>
+                )
+            } )}
         </nav>
     )
 }
