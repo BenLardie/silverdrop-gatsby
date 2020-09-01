@@ -7,9 +7,20 @@ import edit from '../../public/img/018-editing-2.png'
 export default function About() {
     return (
         <section className='about' id='about'>
-            <img class='aboutIcons' src={camera}  alt='camera'/>
+            <div className='icons'>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="bottom-center">
+                    <img class='aboutIcons' src={camera}  alt='camera'/>
+            </div>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="bottom-center">
             <img class='aboutIcons' src={drone}  alt='drone'/>
+            </div>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="bottom-center">
             <img class='aboutIcons' src={edit}  alt='editing'/>
-        </section>
+            </div>
+            </div>
+    </section>
     )
 }

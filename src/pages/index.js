@@ -5,8 +5,11 @@ import Albums from "../components/Albums"
 import TrustedClients from "../components/TrustedClients"
 import { Helmet } from "react-helmet";
 import About from "../components/About"
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const BlogIndex = () => {
+  AOS.init();
 
   return (
     <>
