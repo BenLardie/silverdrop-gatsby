@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Nav from '../components/Nav'
 import Hero from "../components/Hero"
 import Albums from "../components/Albums"
@@ -9,7 +9,13 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 const BlogIndex = () => {
-  AOS.init();
+
+useEffect(()=> {
+  AOS.init({
+    duration : 1500
+  })
+  AOS.refresh()
+},[])
 
   return (
     <>
