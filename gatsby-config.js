@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://relaxed-kirch-616c5f.netlify.app/#`,
+    siteUrl: `https://relaxed-kirch-616c5f.netlify.app/`,
     social: {
       twitter: ``,
     },

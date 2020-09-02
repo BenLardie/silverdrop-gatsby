@@ -4,7 +4,7 @@ import camera from '../../public/img/008-video-camera.png'
 import drone from '../../public/img/033-drone.png'
 import edit from '../../public/img/018-editing-2.png'
 import Curve from './Curve'
-import TrustedClients from "../components/TrustedClients"
+import TrustedClients from "./TrustedClients"
 export default function About() {
     const pics= [camera, drone, edit]
 

@@ -13,7 +13,7 @@ export default function TrustedClients() {
                 name
                 thumbnail {
                   childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 700){
                       src
                       aspectRatio 
                       src 
