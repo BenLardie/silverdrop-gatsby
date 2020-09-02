@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/about.sass'
-import camera from '../../public/img/008-video-camera.png'
-import drone from '../../public/img/033-drone.png'
-import edit from '../../public/img/018-editing-2.png'
+import camera from '../../content/assets/img/008-video-camera.png'
+import drone from '../../content/assets/img/033-drone.png'
+import edit from '../../content/assets/img/018-editing-2.png'
 import Curve from './Curve'
 import TrustedClients from "./TrustedClients"
 export default function About() {
