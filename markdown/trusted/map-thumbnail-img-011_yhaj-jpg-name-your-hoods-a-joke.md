@@ -1,4 +1,4 @@
 ---
-name: Your Hood's a Joke
-thumbnail: /img/011_yhaj.jpg
+name: Shelley Gracey
+thumbnail: /img/07_shelly.jpg
 ---
