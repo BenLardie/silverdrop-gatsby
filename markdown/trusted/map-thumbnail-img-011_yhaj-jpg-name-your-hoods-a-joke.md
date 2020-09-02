@@ -1,4 +1,4 @@
 ---
-name: Shelley Gracey
-thumbnail: /img/07_shelly.jpg
+name: Cottage Comdey Digital
+thumbnail: /img/03_ccd.jpg
 ---
