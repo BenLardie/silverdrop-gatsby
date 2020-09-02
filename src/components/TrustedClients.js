@@ -13,7 +13,7 @@ export default function TrustedClients() {
                 name
                 thumbnail {
                   childImageSharp {
-                    fluid(maxWidth: 700) {
+                    fluid {
                       src
                       aspectRatio 
                       src 
@@ -40,7 +40,7 @@ export default function TrustedClients() {
     swipe: true,
     swipeToSlide: true,
   }
-
+console.log(clientData)
   return (
     <div className='slideWrapper'>
     <Slider {...setting}>

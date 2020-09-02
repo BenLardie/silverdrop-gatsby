@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import Nav from '../components/Nav'
 import Hero from "../components/Hero"
 import Albums from "../components/Albums"
-import TrustedClients from "../components/TrustedClients"
 import { Helmet } from "react-helmet";
 import About from "../components/About"
 import AOS from 'aos'
@@ -27,7 +26,6 @@ useEffect(()=> {
     <Hero />
     <About />
     <Albums />
-    <TrustedClients />
     </>
   )
 }
