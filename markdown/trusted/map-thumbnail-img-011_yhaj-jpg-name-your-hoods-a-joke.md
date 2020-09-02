@@ -1,4 +1,4 @@
 ---
-name: Cottage Comdey Digital
-thumbnail: /img/03_ccd.jpg
+name: Spiky Ball Studios
+thumbnail: /img/09_sbs.jpg
 ---
