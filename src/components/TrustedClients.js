@@ -40,7 +40,7 @@ export default function TrustedClients() {
     swipe: true,
     swipeToSlide: true,
   }
-console.log(clientData)
+
   return (
     <div className='slideWrapperTwo'>
     <Slider {...setting}>
