@@ -3,24 +3,36 @@ import { useStaticQuery, graphql } from 'gatsby'
 import '../styles/portfolio.sass'
 
 export default function Portfolio() {
-    const data = useStaticQuery(graphql`
-    query MyQuery {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/markdown/portfolio/"}}) {
-          edges {
-            node {
-              frontmatter {
-                client
-                embed
-                title
+  const data = useStaticQuery(graphql`
+  query portfolioQuery   {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/markdown/portfolio/"}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              client
+              embed
+              still {
+                childImageSharp {
+                  fluid(maxWidth: 700){
+                    src
+                    aspectRatio 
+                    src 
+                    srcSet 
+                    sizes 
+            }
+          }
               }
             }
           }
         }
       }
-  `)
-
+    }
+`)
 const clientData = data.allMarkdownRemark.edges
-    console.log(clientData)
+
+console.log(clientData)
+
     return (
         <section className='portfolio' id='portfolio'>
 
