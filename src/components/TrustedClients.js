@@ -42,7 +42,7 @@ export default function TrustedClients() {
   }
 console.log(clientData)
   return (
-    <div className='slideWrapper'>
+    <div className='slideWrapperTwo'>
     <Slider {...setting}>
       {clientData.map((client, i = 0) => {
         const image = client.node.frontmatter.thumbnail.childImageSharp.fluid

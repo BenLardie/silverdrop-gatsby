@@ -21,3 +21,13 @@ collections:
   fields:
     - {label: "Name", name: "name", widget: "string"}
     - {label: "thumbnail", name: "thumbnail", widget: "image"}
+
+- label: "Portfolio"
+  name: "portfolio"
+  folder: "markdown/portfolio"
+  create: true
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Client", name: "client", widget: "string"}
+    - {label: "Embed Link", name: "embed", widget: "string"}
+    - {label: "Still", name: "still", widget: "image"}
