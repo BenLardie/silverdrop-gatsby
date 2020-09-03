@@ -4,31 +4,20 @@ import '../styles/portfolio.sass'
 
 export default function Portfolio() {
     const data = useStaticQuery(graphql`
-query clientsQuery   {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/markdown/portfolio/"}}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            client
-            embed
-            still {
-              childImageSharp {
-                fluid(maxWidth: 700){
-                  src
-                  aspectRatio 
-                  src 
-                  srcSet 
-                  sizes 
-          }
-        }
+    query MyQuery {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/markdown/portfolio/"}}) {
+          edges {
+            node {
+              frontmatter {
+                client
+                embed
+                title
+              }
             }
           }
         }
       }
-    }
-  }
-`)
+  `)
 
 const clientData = data.allMarkdownRemark.edges
     console.log(clientData)
