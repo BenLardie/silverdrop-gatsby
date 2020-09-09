@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import PortfolioCard from './PortfolioCard'
 import '../styles/portfolio.sass'
 
 export default function Portfolio() {
@@ -9,7 +10,7 @@ export default function Portfolio() {
         edges {
           node {
             frontmatter {
-              title
+              client
               client
               embed
               still {
@@ -29,13 +30,21 @@ export default function Portfolio() {
       }
     }
 `)
-const clientData = data.allMarkdownRemark.edges
+const portfolioData = data.allMarkdownRemark.edges
 
-console.log(clientData)
+console.log(portfolioData)
 
     return (
         <section className='portfolio' id='portfolio'>
-
+                {portfolioData.map((piece, i = 0) => {
+        const still = piece.node.frontmatter.still.childImageSharp.fluid
+        const client = piece.node.frontmatter.client
+        const embed = piece.node.frontmatter.embed
+        i++
+        return (
+          <PortfolioCard still={still} client={client} embed={embed} key={i} />
+        )
+      })}
         </section>
     )
 }
