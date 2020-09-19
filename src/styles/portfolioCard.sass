@@ -5,25 +5,30 @@
     position: relative
     background: purple
     
-    h2
+h2
+    position: absolute
+    top: 0
+    left: 5%
+    font-size: 6em
+    z-index: 3
+    color: white
+    font-family: $nav-font
+    &::after
+        content: ''
         position: absolute
-        bottom: 0
-        z-index: 3
-        width: 100%
-        color: white
-        font-family: $nav-font
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(205,205,205,0.6740897042410714) 100%)
-        padding: 2em
-
-
+        width: 130%
+        border-bottom: 0.2em solid white
+        top: 85%
+        right: -95%
 
 .portfolioStill
     position: absolute
     width: 50%
     height: 50%
     object-fit: cover
-    top: 30%
+    top: 35%
     right: -45%
     &img
+    border: 0.2em solid white
     border-radius: 30% 70% 26% 74% / 46% 28% 72% 54% 
 
