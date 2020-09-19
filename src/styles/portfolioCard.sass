@@ -1,26 +1,29 @@
+@import ./variables
 .portfolioCard
     width: 100vw
     height: 100vh
     position: relative
+    background: purple
     
     h2
         position: absolute
         bottom: 0
         z-index: 3
+        width: 100%
+        color: white
+        font-family: $nav-font
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(205,205,205,0.6740897042410714) 100%)
+        padding: 2em
 
-.portfolioOverlay 
-    position: absolute
-    height: 100vh
-    width: 100vw
-    background: rgb(0,0,0)
-    background: linear-gradient(0deg, rgba(27,160,152,1) 4%, rgba(222,185,146,1) 74%)
-    z-index: 3
-    top: 0
-    mix-blend-mode: overlay;
+
 
 .portfolioStill
     position: absolute
-    width: 100vw
-    height: 100%
+    width: 50%
+    height: 50%
     object-fit: cover
+    top: 30%
+    right: -45%
+    &img
+    border-radius: 30% 70% 26% 74% / 46% 28% 72% 54% 
 

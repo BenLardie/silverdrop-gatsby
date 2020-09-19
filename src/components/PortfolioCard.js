@@ -7,7 +7,6 @@ export default function PortfolioCard({ still, embed, client }) {
         <div className='portfolioCard'>
             <h2>{client}</h2>
             <Img fluid={still} alt={client} className='portfolioStill' />
-            <div className='portfolioOverlay'></div>
         </div>
     )
 }
