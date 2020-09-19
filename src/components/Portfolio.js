@@ -10,8 +10,7 @@ export default function Portfolio() {
         edges {
           node {
             frontmatter {
-              client
-              client
+              title
               embed
               description
               still {
@@ -39,7 +38,7 @@ console.log(portfolioData)
         <section className='portfolio' id='portfolio'>
                 {portfolioData.map((piece, i = 0) => {
         const still = piece.node.frontmatter.still.childImageSharp.fluid
-        const client = piece.node.frontmatter.client
+        const client = piece.node.frontmatter.title
         const description = piece.node.frontmatter.description
         const embed = piece.node.frontmatter.embed
         i++

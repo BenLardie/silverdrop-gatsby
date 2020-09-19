@@ -27,7 +27,7 @@ collections:
   folder: "markdown/portfolio"
   create: true
   fields:
-    - {label: "Client", name: "client", widget: "string"}
-    - {label: "Description", name: "title", widget: "string"}
+    - {label: "Client", name: "title", widget: "string"}
+    - {label: "Description", name: "description", widget: "string"}
     - {label: "Embed Link", name: "embed", widget: "string"}
     - {label: "Still", name: "still", widget: "image"}
