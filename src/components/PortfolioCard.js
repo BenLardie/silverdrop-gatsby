@@ -2,7 +2,7 @@ import React from 'react'
 import Img from "gatsby-image"
 import '../styles/portfolioCard.sass'
 
-export default function PortfolioCard({ still, embed, title, description }) {
+export default function PortfolioCard({ still, embed, title, client }) {
     return (
         <div className='portfolioCard'>
             <h2>{title}</h2>

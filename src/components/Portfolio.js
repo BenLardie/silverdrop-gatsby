@@ -12,7 +12,7 @@ export default function Portfolio() {
             frontmatter {
               title
               embed
-              description
+              client
               still {
                 childImageSharp {
                   fluid(maxWidth: 700){
@@ -39,11 +39,11 @@ console.log(portfolioData)
                 {portfolioData.map((piece, i = 0) => {
         const still = piece.node.frontmatter.still.childImageSharp.fluid
         const client = piece.node.frontmatter.title
-        const description = piece.node.frontmatter.description
+        const description = piece.node.frontmatter.client
         const embed = piece.node.frontmatter.embed
         i++
         return (
-          <PortfolioCard still={still} client={client} embed={embed} key={i} />
+          <PortfolioCard still={still} title={client} description={description} embed={embed} key={i} />
         )
       })}
         </section>
