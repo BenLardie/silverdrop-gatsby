@@ -43,7 +43,7 @@ console.log(portfolioData)
         const embed = piece.node.frontmatter.embed
         i++
         return (
-          <PortfolioCard still={still} title={client} description={description} embed={embed} key={i} />
+          <PortfolioCard still={still} title={client} description={description} client={description} embed={embed} key={i} />
         )
       })}
         </section>
