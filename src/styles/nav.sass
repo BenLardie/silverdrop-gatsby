@@ -27,41 +27,78 @@ nav
     display: inline-block
     font-family: $nav-font
     font-size: 1.5em
-    transition: all 2s
+
+.hamburger
+    position: fixed
+    top: 1%
+    right: 1%
+
+#navIcon
+    width: 3em
+    height: 2em
     position: relative
-    &:hover
-        color: pink
-        z-index: 3
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .5s ease-in-out
+    -moz-transition: .5s ease-in-out
+    -o-transition: .5s ease-in-out
+    transition: .5s ease-in-out
+    cursor: pointer
 
-.navLink::after
-    text-align: left
-    content: ''
-    position: absolute
+#navIcon span
     display: block
-    bottom: 0
-    left: 0
-    right: 0
-    margin: auto
+    position: absolute
+    height: 0.2em
     width: 100%
-    height: 3em
+    background: #d3531a
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .25s ease-in-out
+    -moz-transition: .25s ease-in-out
+    -o-transition: .25s ease-in-out
+    transition: .25s ease-in-out
+
+#navIcon span:nth-child(1)
+    top: 0px
+
+#navIcon span:nth-child(2)
+    top: 16px
+
+#navIcon span:nth-child(3)
+    top: 34px
+
+#navIcon.open span:nth-child(1)
+    top: 18px
+    -webkit-transform: rotate(135deg)
+    -moz-transform: rotate(135deg)
+    -o-transform: rotate(135deg)
+    transform: rotate(135deg)
+
+#navIcon.open span:nth-child(2)
     opacity: 0
-    &:hover
-        z-index: 2
-        animation: fill 1s forwards
-        -webkit-animation: fill 1s forwards
-        -moz-animation: fill 1s forwards
-        opacity: 1
+    left: -60px
 
-@keyframes fill
-    0%
-        width: 0%
-        height: 1px
+#navIcon.open span:nth-child(3)
+    top: 18px
+    -webkit-transform: rotate(-135deg)
+    -moz-transform: rotate(-135deg)
+    -o-transform: rotate(-135deg)
+    transform: rotate(-135deg)
 
-    50%
-        width: 100%
-        height: 1px
+@media (max-width: $breakpoint-tablet)
+    .navLink
+        display: none
 
-    100%
-        width: 100%
+    .navOpen
         height: 100%
-        background: #333
+        transition: all 1s ease-out
+
+    .navLink.open
+        display: block

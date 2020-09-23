@@ -4,6 +4,7 @@ import '../styles/burger.sass'
 export default function Burger() {
 
     return (
-
+        <>
+        </>
     )
 }

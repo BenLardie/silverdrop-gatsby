@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "gatsby"
 import '../styles/nav.sass'
 import Burger from './Burger'
@@ -8,19 +8,34 @@ export default function Nav() {
         // eslint-disable-next-line global-require
         require("smooth-scroll")('a[href*="#"]')
     }
-
+    const [navState, setNavState] = useState('')
     const links = [{
         to: '/#about',
         displayAddress: 'About'
     }, { to: '/#portfolio', displayAddress: 'Portfolio' }, { to: '/#contact', displayAddress: 'Contact' },]
+
+    const navClick = () => {
+        if (navState === '') {
+            setNavState('open')
+        } else {
+            setNavState('')
+        }
+    }
     return (
-        <nav>
+        <nav className='navOpen'>
             {links.map((link, i=0) => {
                 i++
                 return (
-                    <Link to={link.to} className='navLink' key={i}>{link.displayAddress}</Link>
+                    <Link to={link.to} className='navLink open' key={i}>{link.displayAddress}</Link>
                 )
             } )}
+            <div className='hamburger'>
+                <div id="navIcon" className={navState} onClick={navClick}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
     )
 }
