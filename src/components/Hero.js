@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../static/img/SDM_white.png'
-import sample from '../../static/img/2019_SDM_Promo_2019_30sec.mp4'
+import sample from '../../content/assets/img/2019_SDM_Promo_2019_30sec.mp4'
 import '../styles/hero.sass'
 
 
