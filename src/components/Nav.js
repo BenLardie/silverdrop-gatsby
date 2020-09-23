@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import '../styles/nav.sass'
+import Burger from './Burger'
 
 export default function Nav() {
     if (typeof window !== "undefined") {
