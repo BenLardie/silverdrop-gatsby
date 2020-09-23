@@ -9,6 +9,7 @@ export default function Nav() {
         require("smooth-scroll")('a[href*="#"]')
     }
     const [navState, setNavState] = useState('')
+    const [navOpen, setNavOpen] = useState('')
     const links = [{
         to: '/#about',
         displayAddress: 'About'
@@ -17,16 +18,18 @@ export default function Nav() {
     const navClick = () => {
         if (navState === '') {
             setNavState('open')
+            setNavOpen('navOpen')
         } else {
             setNavState('')
+            setNavOpen('')
         }
     }
     return (
-        <nav className='navOpen'>
+        <nav className={navOpen}>
             {links.map((link, i=0) => {
                 i++
                 return (
-                    <Link to={link.to} className='navLink open' key={i}>{link.displayAddress}</Link>
+                    <Link to={link.to} className={`navLink ${navState}`} key={i}>{link.displayAddress}</Link>
                 )
             } )}
             <div className='hamburger'>

@@ -18,6 +18,7 @@ nav
     z-index: 20
     background-color: $dark-tone
     height: 4em
+    transition: all 1s ease-out
 
 .navLink
     color: white
@@ -30,8 +31,8 @@ nav
 
 .hamburger
     position: fixed
-    top: 1%
-    right: 1%
+    top: 2%
+    right: 4%
 
 #navIcon
     width: 3em
@@ -46,6 +47,7 @@ nav
     -o-transition: .5s ease-in-out
     transition: .5s ease-in-out
     cursor: pointer
+    display: none
 
 #navIcon span
     display: block
@@ -101,4 +103,7 @@ nav
         transition: all 1s ease-out
 
     .navLink.open
+        display: block
+
+    #navIcon 
         display: block
