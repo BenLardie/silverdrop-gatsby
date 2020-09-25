@@ -3,7 +3,7 @@
     width: 100vw
     height: 100vh
     position: relative
-    background: purple
+    background: $accent-color-two
     
 h2
     position: absolute
@@ -11,17 +11,17 @@ h2
     left: 5%
     font-size: 6em
     z-index: 3
-    color: white
+    color: $light-tone
     font-family: $nav-font
     &::after
         content: ''
         position: absolute
         width: 160%
-        border-bottom: 0.2em solid white
+        border-bottom: 0.2em solid $light-tone
         top: 90%
         right: -130%
 .portfolioBlurb
-    color: white
+    color: $light-tone
     width: 60%
     position: absolute
     font-size: 1.5em
@@ -38,7 +38,7 @@ h2
     top: 35%
     right: -45%
     &img
-    border: 0.2em solid white
+    border: 0.2em solid $light-tone
     border-radius: 30% 70% 26% 74% / 46% 28% 72% 54% 
 
 @media (max-width: $breakpoint-tablet)
