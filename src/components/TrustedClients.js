@@ -39,6 +39,15 @@ export default function TrustedClients() {
     arrows: false,
     swipe: true,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+    ]
   }
 
   return (
