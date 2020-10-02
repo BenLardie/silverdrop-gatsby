@@ -6,34 +6,34 @@
     
 h2
     position: relative
-    left: 5%
     font-size: 6em
     color: $light-tone
-    font-family: $nav-font
+    font-family: $main-font
     margin: 0
+    padding-left: 0.5em
     &::after
         position: absolute
         content: ''
-        width: 160%
+        width: 80%
         border-bottom: 0.2em solid $light-tone
         top: 90%
-        right: -130%
+        right: 0
 .portfolioBlurb
     color: $light-tone
-    width: 60%
+    width: 100%
     font-size: 1.5em
-    top: 25%
-    left: 0
-    right: 0
-    margin: 0 auto
+    padding-right: 0.5em
+    text-align: right
+    font-family: $main-font
 
 .portfolioStill
-    width: 50%
-    height: 50%
+    width: 100%
+    height: 60%
     object-fit: cover
+    display: block
+    margin: 2em auto
     &img
     border: 0.2em solid $light-tone
-    border-radius: 30% 70% 26% 74% / 46% 28% 72% 54% 
 
 @media (max-width: $breakpoint-tablet)
 

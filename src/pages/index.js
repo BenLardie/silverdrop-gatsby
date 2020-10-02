@@ -21,6 +21,7 @@ useEffect(()=> {
     <Helmet>
     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <script src="https://kit.fontawesome.com/81afc9904f.js" crossorigin="anonymous"></script>
     </Helmet>
     <Nav />
     <Hero />
