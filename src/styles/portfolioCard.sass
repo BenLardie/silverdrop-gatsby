@@ -2,20 +2,18 @@
 .portfolioCard
     width: 100vw
     height: 100vh
-    position: relative
     background: $accent-color-two
     
 h2
-    position: absolute
-    top: 0
+    position: relative
     left: 5%
     font-size: 6em
-    z-index: 3
     color: $light-tone
     font-family: $nav-font
+    margin: 0
     &::after
-        content: ''
         position: absolute
+        content: ''
         width: 160%
         border-bottom: 0.2em solid $light-tone
         top: 90%
@@ -23,7 +21,6 @@ h2
 .portfolioBlurb
     color: $light-tone
     width: 60%
-    position: absolute
     font-size: 1.5em
     top: 25%
     left: 0
@@ -31,12 +28,9 @@ h2
     margin: 0 auto
 
 .portfolioStill
-    position: absolute
     width: 50%
     height: 50%
     object-fit: cover
-    top: 35%
-    right: -45%
     &img
     border: 0.2em solid $light-tone
     border-radius: 30% 70% 26% 74% / 46% 28% 72% 54% 
@@ -50,15 +44,9 @@ h2
 
     .portfolioStill
         width: 75%
-        top: 40%
-        left: 0
-        right: 0
-        margin: 0 auto
 
 @media (max-width: $breakpoint-phone)
 
     h2
         font-size: 2em
     
-    .portfolioStill
-        top: 30%
