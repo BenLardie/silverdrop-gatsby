@@ -18,9 +18,12 @@ export default function PortfolioCard({ still, embed, title, client }) {
             <h2>{title}</h2>
             <Img fluid={still} alt={client} className='portfolioStill' />
             <p className='portfolioBlurb'>{client}</p>
-            <span onClick={openModule}>
+            <button onClick={openModule}>
             <i className="far fa-play-circle" id='play'></i>
-            </span>
+            </button>
+            <button onClick={openModule}>
+            <i className="fas fa-window-close" id='close'></i>
+            </button>
             <Video embed={embed} open={open} />
         </div>
     )
