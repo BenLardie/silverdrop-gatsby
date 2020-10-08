@@ -8,12 +8,14 @@ export default function PortfolioCard({ still, embed, title, client }) {
     const openModule = () => {
         if (open === 'hidden') {
             setOpen('open')
-            console.log('open')
+            document.querySelector("body").style.overflow = 'hidden';
         } else {
             setOpen('hidden')
+            document.querySelector("body").style.overflow = 'visible';
         }
     }
     return (
+        <>
         <div className='portfolioCard'>
             <h2>{title}</h2>
             <Img fluid={still} alt={client} className='portfolioStill' />
@@ -22,9 +24,10 @@ export default function PortfolioCard({ still, embed, title, client }) {
             <i className="far fa-play-circle" id='play'></i>
             </button>
             <button onClick={openModule}>
-            <i className="fas fa-window-close" id='close'></i>
+            <i className={`fas fa-window-close ${open}`} id='close'></i>
             </button>
-            <Video embed={embed} open={open} />
         </div>
+        <Video embed={embed} open={open} />
+        </>
     )
 }
