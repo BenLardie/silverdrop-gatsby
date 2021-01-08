@@ -32,8 +32,6 @@ export default function Portfolio() {
 `)
 const portfolioData = data.allMarkdownRemark.edges
 
-console.log(portfolioData)
-
     return (
         <section className='portfolio' id='portfolio'>
                 {portfolioData.map((piece, i = 0) => {
@@ -46,6 +44,7 @@ console.log(portfolioData)
           <PortfolioCard still={still} title={client} description={description} client={description} embed={embed} key={i} />
         )
       })}
+
         </section>
     )
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Img from "gatsby-image"
 import '../styles/portfolioCard.sass'
 import Video from './Video'
+import CurveTwo from './CurveTwo'
+
 
 export default function PortfolioCard({ still, embed, title, client }) {
     const [open, setOpen] = useState('hidden')
@@ -26,6 +28,7 @@ export default function PortfolioCard({ still, embed, title, client }) {
             <button onClick={openModule}>
             <i className={`fas fa-window-close ${open}`} id='close'></i>
             </button>
+            <CurveTwo />
         </div>
         <Video embed={embed} open={open} />
         </>
